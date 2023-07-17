@@ -78,8 +78,7 @@
 
             // Update result and copy button
             const shortUrl = redirectUrl;
-            document.getElementById("result").innerHTML = "Your YouTube redirect URL is: <a href='" + shortUrl + "' target='_blank'>" + shortUrl + "</a>";
-            const redirectUrl = "https://tinyurl.com/api-create.php?url=" + ("&shortUrl=" + shortUrl");
+            const redirectUrl = "https://tinyurl.com/api-create.php?url=" + redirectUrl;
 
             fetch(redirectUrl)
                 .then(response => response.text())
